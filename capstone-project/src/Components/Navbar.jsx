@@ -1,13 +1,13 @@
 import React from  'react'
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({token}) => {
     return (
-        <div>
+        <div className='Navbar1'>
         <Link to={"/"}>Home</Link>
-        <Link to={"SignUp"}>SignUp</Link>
-        <Link to={"Login"}>Login</Link>
-        <Link to={"Cart"}>Cart</Link>
+        <Link to={"/Login"}>Login</Link>
+        {token ? null : <Link to={"/SignUp"}>SignUp</Link>}
+        {/* <Link to={"Cart"}>Cart</Link> */}
         </div>
     )
 }

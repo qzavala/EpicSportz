@@ -66,3 +66,23 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+.Navbar1 {
+  right: 0;
+  top: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+ 
+
+}
+img {
+  width: 150px;
+  height: 150px;
+}
+.WebTitle{
+  color:purple
+}

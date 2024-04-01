@@ -9,18 +9,23 @@ import Cart from './Pages/Cart'
 
 
 function App() {
-  
+  const [count, setCount] = useState(0);
+
 
   return (
     <>
+    <div>
+<h2 className='WebTitle'>E-commerce Website</h2>
    <Navbar />
    <Routes>
 <Route path='/'  element={<Home/>}  />
 <Route path='SignUp'  element={<SignUp/>}  />
 <Route path='Login'  element={<Login/>}  />
-<Route path='Cart'  element={<Cart/>}  />
+<Route path='/product/:id'  element={<Cart/>}  />
+{/* <Route path='Cart'  element={<Cart/>}  /> */}
 
    </Routes>
+    </div>
     </>
   )
 }

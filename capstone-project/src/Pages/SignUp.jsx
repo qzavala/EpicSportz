@@ -1,26 +1,98 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom";
 
-const SignUp = () => {
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
-    return (
-        <div>
-            <h1>Register Now!!</h1>
-            <form>
-                <label type="text">First Name:</label>
-                <input type="text" placeholder="Tim" />
-                <label type="text">Last Name:</label>
-                <input type="text" placeholder="Tatman" />
-                <label type="email">Email:</label>
-                <input type="email" placeholder="pokemon@example.com" />
-                <label type="password">Password:</label>
-                <input type="password" placeholder="password" />
+const Register = ({ token }) => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    password: "",
+  });
 
+  useEffect(() => {
+    if (token) {
+      navigate("/login");
+    }
+  }, [token, navigate]);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-            </form>
-        </div>
+    try {
+      const response = await fetch(
+        'https://fakestoreapi.com/users',
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
-    )
-}
-export default SignUp
+      if (response.ok) {
+        console.log("successful!");
+      } else {
+        console.error("failed");
+      }
+    } catch (error) {
+      console.error("Error", error);
+    }
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  return (
+    <div>
+      <h1>Register</h1>
+      <form onSubmit={handleSubmit}>
+        <label>
+          First Name:
+          <input
+            type="text"
+            name="firstname"
+            value={formData.firstname}
+            onChange={handleChange}
+          />
+        </label>
+
+        <label>
+          Last Name:
+          <input
+            type="text"
+            name="lastname"
+            value={formData.lastname}
+            onChange={handleChange}
+          />
+        </label>
+
+        <label>
+          Email:
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+        </label>
+
+        <label>
+          Password:
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+          />
+        </label>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  );
+};
+
+export default Register
