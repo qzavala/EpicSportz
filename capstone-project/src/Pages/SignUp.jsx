@@ -12,7 +12,7 @@ const Register = ({ token }) => {
 
   useEffect(() => {
     if (token) {
-      navigate("/login");
+      navigate("/Login");
     }
   }, [token, navigate]);
 
@@ -32,7 +32,7 @@ const Register = ({ token }) => {
       );
 
       if (response.ok) {
-        console.log("successful!");
+        console.log("success!");
       } else {
         console.error("failed");
       }
