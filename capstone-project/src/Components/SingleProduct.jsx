@@ -16,7 +16,7 @@ const SingleProduct = () => {
   }, [productId]);
 
   if (!product) {
-    return <h1>Loading...</h1>
+    return <h1>Please Wait...</h1>
   }
 
   return <ProductDetails product={product} isSingle />;

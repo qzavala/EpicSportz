@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { login } from "../API"
 import { useNavigate } from "react-router-dom"
+import "./Login.css"
 
 
 const Login = ({ setToken }) => {
@@ -30,7 +31,7 @@ const Login = ({ setToken }) => {
       <form className="login-form" onSubmit={handleSubmit}>
         <h2>Login</h2>
         <div className="form-group">
-          <label htmlFor="username">Username</label>
+          <label htmlFor="username">Username:</label>
           <input
             type="text"
             id="username"
@@ -40,7 +41,7 @@ const Login = ({ setToken }) => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="password">password</label>
+          <label htmlFor="password">Password:</label>
           <input
             type="password"
             id="password"
@@ -49,7 +50,8 @@ const Login = ({ setToken }) => {
             required
           />
         </div>
-        <button type="submit">Login</button>
+        <button 
+        type="submit">Login</button>
       </form>
     </div>
   );

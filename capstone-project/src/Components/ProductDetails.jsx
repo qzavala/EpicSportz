@@ -1,6 +1,7 @@
 import React from "react"
-
 import { useNavigate } from "react-router-dom"
+import "./card.css";
+
 
 const ProductDetails = ({ product, isSingle }) => {
   const navigate = useNavigate();

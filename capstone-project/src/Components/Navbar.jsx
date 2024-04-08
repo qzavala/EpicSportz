@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "./NavbarTwo.css" 
 import { Link, useNavigate } from "react-router-dom"
 
 
@@ -12,13 +12,13 @@ const Navbar = ({token, setToken}) => {
   return (
     <nav className="navbar-container">
         <div>
-            EpicSports
+            Epic Website
         </div>
-        <div className='link'>
+        <div className='link-tings'>
             <Link className='nav-link' to={"/"}>
                 Products
             </Link>
-            <Link to={"/Register"}> Register </Link>
+            <Link  className='nav-link'to={"/Register"}> Register </Link>
             {token ? (
             <button className='logout-button' onClick={handleLogout}>Logout</button> ): (
             <Link to="/login" className='nav-link'>
