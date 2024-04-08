@@ -1,6 +1,6 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
-import "./card.css";
+import "./PDetails.css"
 
 
 const ProductDetails = ({ product, isSingle }) => {
@@ -10,8 +10,8 @@ const ProductDetails = ({ product, isSingle }) => {
   };
 
   return (
-    <div className="card">
-      <img src={product.image} alt={product.title} className="card-image" />
+    <div className="product">
+      <img src={product.image} alt={product.title} className="product-image" />
       <div className="card-content">
         <h2 className="card-title">{product.title}</h2>
         <p className="card-price">${product.price}</p>
