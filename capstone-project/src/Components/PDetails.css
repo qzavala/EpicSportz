@@ -11,3 +11,24 @@
   width: 300px;
   height: 300px;
 }
+.product-content{
+  background-color:aqua;
+}
+.product-title{
+background-color: antiquewhite;
+}
+.product-price{
+background-color: aqua;
+}
+
+.product-description{
+background-color: antiquewhite;
+}
+
+.product-button{
+background-color:brown;
+}
+
+.view-item-button{
+background-color: brown;
+}
