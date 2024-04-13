@@ -1,6 +1,7 @@
-import React from 'react'
 import "./NavbarTwo.css" 
-import { Link, useNavigate } from "react-router-dom"
+import React from 'react'
+
+import {Link, useNavigate } from "react-router-dom"
 
 
 const Navbar = ({token, setToken}) => {
@@ -12,17 +13,20 @@ const Navbar = ({token, setToken}) => {
   return (
     <nav className="navbar-container">
         <div>
-            Epic Website
+            <strong><em>Epic Website</em></strong>
         </div>
-        <div className='link-tings'>
+        <div className='link'>
             <Link className='nav-link' to={"/"}>
                 Products
             </Link>
-            <Link  className='nav-link'to={"/Register"}> Register </Link>
+            <Link to={"/Register"} className='nav-link'> Register </Link>
             {token ? (
-            <button className='logout-button' onClick={handleLogout}>Logout</button> ): (
+                <>
+                <Link className='nav-link' to={"/cart"}>Cart</Link>
+            <button className='logout-button' onClick={handleLogout}>Logout</button> 
+            </> ): (
             <Link to="/login" className='nav-link'>
-                Login
+                login
             </Link>  
         )}
         </div>
