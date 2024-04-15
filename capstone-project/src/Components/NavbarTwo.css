@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color:bisque;
+  background-color:aqua;
   color: rgb(0, 0, 0);
 }
 
@@ -31,4 +31,15 @@
   padding: 5px 5px;
   color: white;
   cursor: pointer;
+}
+.ss-title{
+  text-align: center;
+    font-size:5px; font-weight:300; color:#222; letter-spacing:1px;
+    text-transform: uppercase;
+
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 10px;
+    align-items: center;
 }

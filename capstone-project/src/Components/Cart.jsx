@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-
+ import "./cart.css" 
 import CartItemCard from "./CartItemCard"
 import { addCartItem } from "../Pages/helpers"
 import { removeCartItem } from "../Pages/helpers"
@@ -47,8 +47,8 @@ const Cart = ({ cart, products, setCart, reduce }) => {
 
   return (
     <div>
-      <h1>Shopping Cart</h1>
-      <p>Total Items: </p>
+      <h1 className="s-cart">Shopping Cart</h1>
+      <p className="s-total">Total Items: </p>
       {cart.map((item) => {
         const productItem = getAllItemDetails(item);
         return (
@@ -62,7 +62,7 @@ const Cart = ({ cart, products, setCart, reduce }) => {
           />
         );
       })}
-      <p>Subtotal: {isNaN(subTotal) ? "$0:00" : `$${subTotal.toFixed(2)}`}</p>
+      <p className="s-subtotal">Subtotal: {isNaN(subTotal) ? "$0:00" : `$${subTotal.toFixed(2)}`}</p>
       <button onClick={() => navigate("/checkout")}>Checkout</button>
     </div>
   );

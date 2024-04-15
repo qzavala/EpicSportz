@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-
+import "./checkOutP.css"
 const CheckoutPage = () => {
 
 const [formData, setFormData] = useState({
@@ -29,7 +29,7 @@ const handleSubmit = (e) => {
 
   return (
     <div className="checkout-page">
-      <h2>Checkout</h2>
+      <h2 className='s-checkout'>Checkout</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -79,7 +79,8 @@ const handleSubmit = (e) => {
           placeholder="Country"
           required
         />
-        <button type="submit">Place your Order</button>
+        <br />
+        <button className="s-button" type="submit">Place your Order</button>
       </form>
     </div>
   );

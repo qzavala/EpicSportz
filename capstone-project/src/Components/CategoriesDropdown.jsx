@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import "./CateDropDown.css" 
 const CategoriesDropdown = () => {
     const [selectedOption, setSelectedOption] = useState("");
     const navigate = useNavigate();
@@ -32,7 +32,7 @@ const CategoriesDropdown = () => {
                 </option>
             })}
         </select>
-        <p>Selected Category: {selectedOption}</p>
+        <p className='category'>Selected Category: {selectedOption}</p>
     </div>
   )
 }

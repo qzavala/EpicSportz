@@ -12,8 +12,8 @@ const Navbar = ({token, setToken}) => {
     }
   return (
     <nav className="navbar-container">
-        <div>
-            <strong><em>Epic Website</em></strong>
+        <div className="ss-title">
+            <h1>Epic Website</h1>
         </div>
         <div className='link'>
             <Link className='nav-link' to={"/"}>
@@ -26,7 +26,7 @@ const Navbar = ({token, setToken}) => {
             <button className='logout-button' onClick={handleLogout}>Logout</button> 
             </> ): (
             <Link to="/login" className='nav-link'>
-                login
+                Login
             </Link>  
         )}
         </div>

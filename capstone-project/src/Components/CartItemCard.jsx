@@ -1,5 +1,5 @@
 import React from "react"
-
+import "./cartItemCard.css"
 
 const CartItemCard = ({
   cartItem,
@@ -31,9 +31,9 @@ const CartItemCard = ({
         />
       </div>
       <div className="cart-item-details">
-        <h3>{cartItem?.title}</h3>
-        <p>Price: ${cartItem?.price}</p>
-        <p>Quantity: {quantity}</p>
+        <h3 className="s-title">{cartItem?.title}</h3>
+        <p className="s-price">Price: ${cartItem?.price}</p>
+        <p className="s-quantity">Quantity: {quantity}</p>
         <select value={quantity} onChange={handleQuantityChange}>
           {[...Array(30).keys()].map((index) => (
             <option key={index} value={index + 1}>

@@ -45,10 +45,10 @@ const Register = ({ token }) => {
 
   return (
     <div>
-      <h1 className="title">Register</h1>
+      <h1 className="title">Register Now!!!</h1>
       <form onSubmit={handleSubmit}>
         <label className="form">
-          Firstname:
+          First Name:
           <input
             type="text"
             name="firstname"
@@ -58,7 +58,7 @@ const Register = ({ token }) => {
         </label>
 
         <label className="form">
-          Lastname:
+          Last Name:
           <input
             type="text"
             name="lastname"
@@ -73,6 +73,16 @@ const Register = ({ token }) => {
             type="email"
             name="email"
             value={formData.email}
+            onChange={handleChange}
+          />
+        </label>
+
+        <label className="form">
+          Username:
+          <input
+            type="username"
+            name="username"
+            value={formData.username}
             onChange={handleChange}
           />
         </label>

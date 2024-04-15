@@ -13,13 +13,13 @@
   height: 300px;
 }
 .product-content{
-  background-color:aqua;
+  background-color:antiquewhite;
 }
 .product-title{
 background-color: antiquewhite;
 }
 .product-price{
-background-color: aqua;
+background-color: antiquewhite;
 }
 
 .product-description{
@@ -35,4 +35,7 @@ background-color: brown;
 }
 div{
   display: -moz-grid-group
+}
+body{
+  background-color:#444a5c;
 }
